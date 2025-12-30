@@ -2,8 +2,128 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <title>心得筆記</title>
-  <link rel="stylesheet" href="style.css">
+  <title>學習心得筆記</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', 'Microsoft JhengHei', sans-serif;
+    }
+    
+    body {
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    nav {
+      background-color: #2c3e50;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      padding: 10px 20px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    
+    nav a:hover {
+      background-color: #34495e;
+    }
+    
+    h1 {
+      text-align: center;
+      margin: 40px 0;
+      color: #2c3e50;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .week-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      margin-bottom: 30px;
+      padding: 30px;
+      border-top: 5px solid #3498db;
+    }
+    
+    .week-card:nth-child(even) {
+      border-top-color: #2ecc71;
+    }
+    
+    .week-title {
+      color: #2c3e50;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #f1f1f1;
+    }
+    
+    .topic {
+      margin-bottom: 25px;
+    }
+    
+    .topic-title {
+      color: #e74c3c;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+    
+    .content {
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+    
+    .steps {
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 15px 0;
+    }
+    
+    .step {
+      margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
+    }
+    
+    .step:before {
+      content: "•";
+      color: #3498db;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+    
+    .highlight {
+      background-color: #e8f4fc;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 15px 0;
+      border-left: 4px solid #3498db;
+    }
+    
+    @media (max-width: 768px) {
+      .week-card {
+        padding: 20px;
+      }
+      
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -15,41 +135,76 @@
   </nav>
 
   <h1>學習心得</h1>
-
-  <article class="note">
-    <h2>w3: 什麼是 git, GitHub, gist 與 cmsimde? 如何使用這些工具？為什麼要使用這些工具？</h2>
-    <p>
-      1 Git - 時光機 + 分工本
-      裝在你電腦裡的軟體，用來記錄檔案（尤其是程式碼）的「每一個修改歷史」。可以回到任何一個過去版本，也可以讓多人同時修改不同部分再合併。
-      2 GitHub - 程式碼的雲端硬碟 + 協作平台
-      一個網站，專門用來存放用 Git 管理的專案。讓你可以把本地專案備份到雲端，並方便地與他人協作、討論、分享。
-      3 Gist - GitHub 的便利貼
-      GitHub 提供的一個小功能，用來快速分享「一小段程式碼」或筆記。它背後也是一個迷你 Git 倉庫。
-      4 CMSimde - 簡單的網站製造機
-      一個非常輕量、操作簡單的內容管理系統，特別適合老師和學生用來快速建立課程網站、寫筆記
-      5 如何使用這些工具？
-      步驟 1：安裝與設定 Git
-      步驟 2：Git + GitHub 基礎協作流程
-      步驟 3：使用 Gist 分享片段
-      步驟 4：使用 CMSimde 建網站
-      6 為甚麼要使用這些工具?
-      用 Git在本地管理程式碼版本，然後推送到 GitHub進行備份和分享。如果想只分享一段代碼，就用 Gist。如果你想快速做一個教學網站來放這些內容，就可以用 CMSimde。
-    </p>
-    <h2>w7: Brython 是什麼？如何在瀏覽器配置 Brython 環境？ Brython 能做什麼？ </h2>
-    <p>
-      1 Brython（Browser Python）是 在瀏覽器中執行的 Python 3 實現。用 Python 替代 JavaScript 進行前端開發。
-      2 第 1 步：建立 HTML 檔案
-        第 2 步：加入 Brython CDN
-        第 3 步：啟動 Brython
-        第 4 步：編寫 Python 程式
-      3 1. DOM 操作（取代 jQuery）
-        2. AJAX 請求（取代 fetch/axios）
-        3. 繪圖與動畫
-        4. 與 JavaScript 互操作
-        5. Python 標準庫支援
-        6. 建立 GUI 應用
-    </p>  
-  </article>
+  
+  <div class="container">
+    
+    <div class="week-card">
+      <h2 class="week-title">第三週：Git、GitHub、Gist 與 CMSimde</h2>
+      
+      <div class="topic">
+        <h3 class="topic-title">Git - 時光機 + 分工本</h3>
+        <p class="content">裝在你電腦裡的軟體，用來記錄檔案（尤其是程式碼）的「每一個修改歷史」。可以回到任何一個過去版本，也可以讓多人同時修改不同部分再合併。</p>
+      </div>
+      
+      <div class="topic">
+        <h3 class="topic-title">GitHub - 程式碼的雲端硬碟 + 協作平台</h3>
+        <p class="content">一個網站，專門用來存放用 Git 管理的專案。讓你可以把本地專案備份到雲端，並方便地與他人協作、討論、分享。</p>
+      </div>
+      
+      <div class="topic">
+        <h3 class="topic-title">Gist - GitHub 的便利貼</h3>
+        <p class="content">GitHub 提供的一個小功能，用來快速分享「一小段程式碼」或筆記。它背後也是一個迷你 Git 倉庫。</p>
+      </div>
+      
+      <div class="topic">
+        <h3 class="topic-title">CMSimde - 簡單的網站製造機</h3>
+        <p class="content">一個非常輕量、操作簡單的內容管理系統，特別適合老師和學生用來快速建立課程網站、寫筆記。</p>
+      </div>
+      
+      <div class="steps">
+        <h3 class="topic-title">如何使用這些工具？</h3>
+        <div class="step">步驟 1：安裝與設定 Git</div>
+        <div class="step">步驟 2：Git + GitHub 基礎協作流程</div>
+        <div class="step">步驟 3：使用 Gist 分享片段</div>
+        <div class="step">步驟 4：使用 CMSimde 建網站</div>
+      </div>
+      
+      <div class="highlight">
+        <strong>為什麼要使用這些工具？</strong>
+        <p>用 Git 在本地管理程式碼版本，然後推送到 GitHub 進行備份和分享。如果想只分享一段代碼，就用 Gist。如果你想快速做一個教學網站來放這些內容，就可以用 CMSimde。</p>
+      </div>
+    </div>
+    
+    <div class="week-card">
+      <h2 class="week-title">第七週：Brython 是什麼？</h2>
+      
+      <div class="topic">
+        <h3 class="topic-title">Brython（Browser Python）</h3>
+        <p class="content">是在瀏覽器中執行的 Python 3 實現。用 Python 替代 JavaScript 進行前端開發。</p>
+      </div>
+      
+      <div class="steps">
+        <h3 class="topic-title">如何在瀏覽器配置 Brython 環境？</h3>
+        <div class="step">第 1 步：建立 HTML 檔案</div>
+        <div class="step">第 2 步：加入 Brython CDN</div>
+        <div class="step">第 3 步：啟動 Brython</div>
+        <div class="step">第 4 步：編寫 Python 程式</div>
+      </div>
+      
+      <div class="topic">
+        <h3 class="topic-title">Brython 能做什麼？</h3>
+        <div class="steps">
+          <div class="step">1. DOM 操作（取代 jQuery）</div>
+          <div class="step">2. AJAX 請求（取代 fetch/axios）</div>
+          <div class="step">3. 繪圖與動畫</div>
+          <div class="step">4. 與 JavaScript 互操作</div>
+          <div class="step">5. Python 標準庫支援</div>
+          <div class="step">6. 建立 GUI 應用</div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
 
 </body>
 </html>
