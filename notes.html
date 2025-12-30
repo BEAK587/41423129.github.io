@@ -69,6 +69,10 @@
       border-top-color: #e74c3c;
     }
     
+    .week-card:nth-child(5) {
+      border-top-color: #f39c12;
+    }
+    
     .week-title {
       color: #2c3e50;
       margin-bottom: 20px;
@@ -166,6 +170,36 @@
       color: #9b59b6;
     }
     
+    /* 連結按鈕樣式 */
+    .project-link {
+      display: inline-block;
+      background-color: #3498db;
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: 500;
+      margin: 15px 10px 15px 0;
+      transition: all 0.3s ease;
+      border: 2px solid #3498db;
+    }
+    
+    .project-link:hover {
+      background-color: #2980b9;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+    }
+    
+    .project-link.secondary {
+      background-color: transparent;
+      color: #3498db;
+    }
+    
+    .project-link.secondary:hover {
+      background-color: #3498db;
+      color: white;
+    }
+    
     @media (max-width: 768px) {
       .week-card {
         padding: 20px;
@@ -179,6 +213,12 @@
       .code-section {
         padding: 15px;
         font-size: 0.85rem;
+      }
+      
+      .project-link {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
       }
     }
   </style>
@@ -369,7 +409,7 @@
       </div>
     </div>
     
-    <!-- 新增第14週內容 -->
+    <!-- 第14週內容 -->
     <div class="week-card">
       <h2 class="week-title">w14：在瀏覽器中模擬機器人作動的目的是什麼？</h2>
       
@@ -405,6 +445,48 @@
       <div class="topic">
         <h3 class="topic-title">實際應用層面</h3>
         <p class="content">這種模擬技術不僅適用於教育領域，也在工業設計、遊戲開發、自動化測試等領域有廣泛應用。透過模擬，開發者可以在投入實際資源前，先驗證設計的可行性和效率，大幅降低開發成本與風險。</p>
+      </div>
+    </div>
+    
+    <!-- 新增第17週內容 -->
+    <div class="week-card">
+      <h2 class="week-title">w17：計算機程式課程學到了什麼？</h2>
+
+      <div class="topic">
+        <h3 class="topic-title">實際作品成果</h3>
+        <p class="content">在課程中，我完成了以下實際作品，這些作品展示了我的學習成果與應用能力：</p>
+        
+        <div class="highlight">
+          <strong>個人網站專案：</strong>
+          <p>我建立了一個完整的個人網站，包含以下四個主要頁面：</p>
+          <div class="steps">
+            <div class="step"><strong>首頁：</strong> 展示個人簡介與網站功能</div>
+            <div class="step"><strong>關於我：</strong> 詳細的個人背景與技能介紹</div>
+            <div class="step"><strong>作品集：</strong> 展示學習過程中的專案成果</div>
+            <div class="step"><strong>學習心得：</strong> 記錄每週的學習過程與反思</div>
+          </div>
+          
+          <!-- 作品連結按鈕 -->
+          <div style="margin-top: 20px;">
+            <a href="projects.html" class="project-link">
+              <i class="fas fa-external-link-alt"></i> 瀏覽我的作品集
+            </a>
+            <a href="index.html" class="project-link secondary">
+              <i class="fas fa-home"></i> 查看我的個人網站
+            </a>
+          </div>
+        </div>
+      </div>
+        
+        <!-- 更多連結按鈕 -->
+        <div style="margin-top: 25px;">
+          <a href="about.html" class="project-link secondary">
+            <i class="fas fa-user"></i> 了解更多關於我
+          </a>
+          <a href="notes.html#w10" class="project-link secondary">
+            <i class="fas fa-robot"></i> 查看機器人程式範例
+          </a>
+        </div>
       </div>
     </div>
     
